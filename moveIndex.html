@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script src="./zepto.js"></script>
+    <script src="./zeptoTap.js"></script>
+   
+    <link rel="stylesheet" href="./css/moveIndex.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="./imgs/logo.png" alt=""></div>
+    <button type="button" class="navopen-btn">三 </button>
+</div>
+
+
+<div class="dofy"><div><img src="./imgs/v-text.png" alt=""></div></div>
+<div class="checkMenu">
+    <button type="button" class="navclose-btn">+</button>
+    <ul class="fl navmenu">
+        <li>
+                    <a href="">走进精智</a>
+                </li><li>
+                    <a href="">解决方案</a>
+                </li><li>
+                    <a href="">服务模式</a>
+                </li><li>
+                    <a href="">新闻中心</a>
+                </li><li>
+                    <a href="">人才招聘</a>
+                </li><li>
+                    <a href="">联系我们</a>
+                </li>
+    
+    </ul>
+</div>
+<script>
+    var checkMenu = document.querySelector(".checkMenu");
+    var button = document.querySelector("button");
+  
+     console.log($(".navopen-btn"))
+     console.log($(".navclose-btn"))
+     console.log($(".checkMenu"))
+     $(".checkMenu").css('opacity','0')
+    $(".navopen-btn").tap(function(){
+        console.log(1)
+        $(".checkMenu").css({'opacity':'1','display':'block',})
+    })
+    $(".navclose-btn").tap(function(){
+        
+        $(".checkMenu").css({'opacity':'0','display':'none',})
+    })
+  
+</script>
+</body>
+</html>
